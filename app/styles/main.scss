@@ -1,0 +1,40 @@
+@import "base";
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+html, body{
+    height:100%;
+}
+
+body {
+    background-color: $color_main_a;
+}
+
+.container-fluid{
+    height: 100%;
+    padding: 0px;
+
+}
+.sidebar {
+    background-color: $color_main_a;
+    .icon-bar {
+        background-color: #808080;
+    }
+
+    .navbar-brand{
+        height: auto;
+        line-height: normal;
+        padding: 15px 0px;
+    }
+}
+
+.content {
+
+    background-color: $color_main_b;
+    height: 100%;
+
+}
