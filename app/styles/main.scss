@@ -38,7 +38,6 @@ a {
     @extend .col-sm-5;
     @extend .col-md-4;
     @extend .col-lg-3;
-
     @media (min-width: $screen-lg-min) {
         max-width: 450px;
     }
@@ -49,14 +48,14 @@ a {
         padding-top: 15px;
         padding-left: 15px;
         a {
-            color: $color_main_font !important;
+            color: $color_main_font;
             font-size: 1.6em;
         }
         .navbar-header {
             width: 100%;
             font-size: 2em;
         }
-        #navbar {
+        #mainMenu {
             padding: 0px;
         }
         .navbar-nav {
@@ -66,6 +65,12 @@ a {
                 a {
                     padding: 15px 0px;
                     font-family: $font_condensed;
+                }
+                a:target {
+                    background-color: red;
+                }
+                .activeMenuItem {
+                    color: $color_main_active_font;
                 }
             }
         }
@@ -79,10 +84,9 @@ a {
             background-repeat: no-repeat;
             background-position: center center;
             background-size: auto 100%;
-
             @media (max-width: 400px) {
-            margin-top: 0px;
-        }
+                margin-top: 0px;
+            }
         }
     }
 }
@@ -95,9 +99,16 @@ a {
     width: 280px;
     height: 150px;
     background-image: $url_title_png;
-    span {
+    h1 {
         display: none;
     }
+}
+
+#pesquisa,
+#consorcios,
+#publicacoes,
+#contato {
+    display: none;
 }
 
 .content {
@@ -106,4 +117,5 @@ a {
     @extend .col-sm-7;
     @extend .col-md-8;
     @extend .col-lg-9;
+    #pesquisa, #consorcios, #publicacoes, #contato {}
 }

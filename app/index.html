@@ -28,7 +28,7 @@
 
     <div class="container-fluid">
 
-        <div class="sidebar col-sm-5">
+        <div class="sidebar">
 
         <nav class="navbar" role="navigation">
 
@@ -40,21 +40,21 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#" data-role="ajax" alt="Consórcios Nacionais de Saneamento">
-               <span>Consórcios <br>Nacionais de <br> Saneamento</span>
+               <h1>Consórcios <br>Nacionais de <br> Saneamento</h1>
                 </a>
 
             </div>
 
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="mainMenu" class="navbar-collapse collapse">
 
                 <ul class="nav navbar-nav navbar-left ">
-                    <li><a href="pesquisa" data-role="ajax">Pesquisa</a>
+                    <li><a href="#pesquisa" data-role="ajax">Pesquisa</a>
                     </li>
-                    <li><a href="consorcios" data-role="ajax">Consórcios</a>
+                    <li><a href="#consorcios" data-role="ajax">Consórcios</a>
                     </li>
-                    <li><a href="publicacoes" data-role="ajax">Publicações</a>
+                    <li><a href="#publicacoes" data-role="ajax">Publicações</a>
                     </li>
-                    <li><a href="contato" data-role="ajax">Contato</a>
+                    <li><a href="#contato" data-role="ajax">Contato</a>
                     </li>
 
                 </ul>
@@ -64,9 +64,12 @@
 
 
             </div>
-        <main class="content col-sm-7 col-lg-9">
+        <main class="content">
+            <div id="pesquisa"><h2>Pesquisa</h2></div>
+            <div id="consorcios"><h2>Consórcios</h2></div>
+            <div id="publicacoes"><h2>Publicações</h2></div>
+            <div id="contato"><h2>Contato</h2></div>
 
-            <h1>Conteúdo</h1>
         </main>
 
     </div>
