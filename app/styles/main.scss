@@ -6,35 +6,104 @@
     padding: 0.2em 0;
 }
 
-html, body{
-    height:100%;
+html,
+body {
+    height: 100%;
 }
 
 body {
-    background-color: $color_main_a;
+    background-color: $color_main_b;
+    font-family: $font_regular;
+    font-size: 13px;
 }
 
-.container-fluid{
+a {
+    outline: 0 !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        font-size: 13px;
+    }
+}
+
+.container-fluid {
     height: 100%;
     padding: 0px;
-
 }
+
 .sidebar {
     background-color: $color_main_a;
+    height: 100%;
+    @extend .col-sm-5;
+    @extend .col-md-4;
+    @extend .col-lg-3;
+
+    @media (min-width: $screen-lg-min) {
+        max-width: 450px;
+    }
     .icon-bar {
         background-color: #808080;
     }
+    .navbar {
+        padding-top: 15px;
+        padding-left: 15px;
+        a {
+            color: $color_main_font !important;
+            font-size: 1.6em;
+        }
+        .navbar-header {
+            width: 100%;
+            font-size: 2em;
+        }
+        #navbar {
+            padding: 0px;
+        }
+        .navbar-nav {
+            margin-left: 0px;
+            > li {
+                float: none;
+                a {
+                    padding: 15px 0px;
+                    font-family: $font_condensed;
+                }
+            }
+        }
+        .navbar-brand {
+            width: 100%;
+            height: 100%;
+            max-width: 300px;
+            line-height: 1.1em;
+            padding: 0px;
+            margin: 15px 0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
 
-    .navbar-brand{
-        height: auto;
-        line-height: normal;
-        padding: 15px 0px;
+            @media (max-width: 400px) {
+            margin-top: 0px;
+        }
+        }
+    }
+}
+
+.svg .navbar-brand {
+    background-image: $url_title;
+}
+
+.no-svg .sidebar .navbar .navbar-brand {
+    width: 280px;
+    height: 150px;
+    background-image: $url_title_png;
+    span {
+        display: none;
     }
 }
 
 .content {
-
     background-color: $color_main_b;
     height: 100%;
-
+    @extend .col-sm-7;
+    @extend .col-md-8;
+    @extend .col-lg-9;
 }

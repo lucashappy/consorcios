@@ -4,6 +4,40 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "compass-mixins/lib/_compass.scss";
 // endbower
 
+//urls
+$url_title: url("../images/title.svg");
+$url_title_png: url("../images/title.png");
 
+//colors
 $color_main_a: #bec8b7;
 $color_main_b: #eac6ae;
+$color_main_font: #6c5d53;
+
+//fonts
+@font-face {
+    font-family: 'nobel';
+    src: url('fonts/dtlnobelt-webfont.eot');
+    src: url('fonts/dtlnobelt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dtlnobelt-webfont.woff2') format('woff2'),
+         url('fonts/dtlnobelt-webfont.woff') format('woff'),
+         url('fonts/dtlnobelt-webfont.ttf') format('truetype'),
+         url('fonts/dtlnobelt-webfont.svg#dtl_nobelt_condensed_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nobelcondensed';
+    src: url('fonts/dtlnobelt-condensed-webfont.eot');
+    src: url('fonts/dtlnobelt-condensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dtlnobelt-condensed-webfont.woff2') format('woff2'),
+         url('fonts/dtlnobelt-condensed-webfont.woff') format('woff'),
+         url('fonts/dtlnobelt-condensed-webfont.ttf') format('truetype'),
+         url('fonts/dtlnobelt-condensed-webfont.svg#dtl_nobelt_condensed_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+$font_regular: 'nobel', Helvetica, Helvetica Neue, Verdana, sans-serif;
+$font_condensed: 'nobelcondensed', Helvetica, Helvetica Neue, Verdana, sans-serif;
