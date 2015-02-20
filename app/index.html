@@ -30,45 +30,130 @@
 
         <div class="sidebar">
 
-        <nav class="navbar" role="navigation">
+            <nav class="navbar" role="navigation">
 
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#" data-role="ajax" alt="Consórcios Nacionais de Saneamento">
-               <h1>Consórcios <br>Nacionais de <br> Saneamento</h1>
-                </a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" data-role="ajax" alt="Consórcios Nacionais de Saneamento">
+                        <h1>Consórcios <br>Nacionais de <br> Saneamento</h1>
+                    </a>
 
-            </div>
+                </div>
 
-            <div id="mainMenu" class="navbar-collapse collapse">
+                <div id="mainMenu" class="navbar-collapse collapse">
 
-                <ul class="nav navbar-nav navbar-left ">
-                    <li><a href="#pesquisa" data-role="ajax">Pesquisa</a>
-                    </li>
-                    <li><a href="#consorcios" data-role="ajax">Consórcios</a>
-                    </li>
-                    <li><a href="#publicacoes" data-role="ajax">Publicações</a>
-                    </li>
-                    <li><a href="#contato" data-role="ajax">Contato</a>
-                    </li>
+                    <ul class="nav navbar-nav navbar-left ">
+                        <li><a href="#pesquisa" data-role="ajax">Pesquisa</a>
+                        </li>
+                        <li><a href="#consorcios" data-role="ajax">Consórcios</a>
+                        </li>
+                        <li><a href="#publicacoes" data-role="ajax">Publicações</a>
+                        </li>
+                        <li><a href="#contato" data-role="ajax">Contato</a>
+                        </li>
 
-                </ul>
-            </div>
+                    </ul>
+                </div>
 
-        </nav>
+            </nav>
 
 
-            </div>
+        </div>
         <main class="content">
-            <div id="pesquisa"><h2>Pesquisa</h2></div>
-            <div id="consorcios"><h2>Consórcios</h2></div>
-            <div id="publicacoes"><h2>Publicações</h2></div>
-            <div id="contato"><h2>Contato</h2></div>
+            <div id="pesquisa">
+                <h2>Pesquisa</h2>
+            </div>
+            <div id="consorcios">
+                <h2>Consórcios</h2>
+
+                <div id="searchFilter">
+
+                    <!--                     <input id="searchBox" type="search" class="form-control" placeholder="Pesquisar...">-->
+
+                    <!--                     <input type="button" class="btn glyphicon glyphicon-filter" >-->
+
+                    <div class="btn-group">
+                        <input id="searchBox" type="search" class="form-control" placeholder="Pesquisar...">
+                    </div>
+                    <div class="btn-group">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                                Estados
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="estados dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="btn-group">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                                Areas
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                                <li>Água</li>
+                                <li>Esgoto</li>
+                                <li>Resíduos Sólidos</li>
+                                <li>Regulação de Saneamento</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <!--
+                 <div class="table-responsive">
+                <table id="consorciosTable" class="table table-striped table-bordered">
+                    <tr>
+                        <th>Consórcio</th>
+                        <th>UF</th>
+                        <th>Area</th>
+                    </tr>
+                </table>
+                </div>
+-->
+
+                <div id="consorciosThumbs">
+
+                    <!--
+                    <div class="thumb">
+                        <p>Consórcio Intermunicipal Aliança para a Saúde</p>
+                        <aside>
+                        <div class="estado">TO</div>
+                        <div class="areas">
+                            <div class="triangle"></div>
+                            <div class="agua"></div>
+                            <div class="esgoto"></div>
+                            <div class="residuos"></div>
+                            <div class="regulacao"></div>
+                        </div>
+                    </aside>
+                    </div>
+-->
+
+
+
+                </div>
+            </div>
+            <div id="publicacoes">
+                <h2>Publicações</h2>
+            </div>
+            <div id="contato">
+                <h2>Contato</h2>
+            </div>
 
         </main>
 
@@ -90,6 +175,7 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/tinycolor/tinycolor.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -112,7 +198,11 @@
     </script>
 
     <!-- build:js({app,.tmp}) scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js">
+    </script>
+    <script>
+        navigateToPage();
+    </script>
     <!-- endbuild -->
 </body>
 

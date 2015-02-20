@@ -4,7 +4,8 @@
   "dependencies": {
     "bootstrap-sass-official": "~3.2.0",
     "modernizr": "~2.8.2",
-    "compass-mixins": "~1.0.2"
+    "compass-mixins": "~1.0.2",
+    "tinycolor": "1.1.2"
   },
   "version": "0.0.0",
   "authors": [
