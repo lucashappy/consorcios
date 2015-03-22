@@ -5,18 +5,25 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 
 //urls
-$url_title: url("../images/title.svg");
+//$url_title: url("../images/title.svg");
+$url_title: url("../images/symbol.png");
 $url_title_png: url("../images/title.png");
-$homefig: url("../images/homefig.png");
+//$homefig: url("../images/homefig.png");
+$homefig: url("../images/diorama.png");
 $wave1: url("../images/wave1.svg");
 $wave2: url("../images/wave2.svg");
 $wave3: url("../images/wave3.svg");
 $img_torneira: url("../images/torneira.png");
-$img_esgoto: url("../images/esgoto.png");
+$img_esgoto: url("../images/esgoto.svg");
+$img_agua: url("../images/agua.svg");
+$img_residuos: url("../images/residuos.svg");
+$img_regulacao: url("../images/regulacao.svg");
+$img_apoio: url("../images/apoio.svg");
 
 //colors
-$color_main_a: #bec8b7;
-$color_main_b: #eac6ae;
+$color_main_a: #bfc4b7;
+//$color_main_b: #eac6ae;
+$color_main_b: #D7D3BE;
 $color_main_font: #6c5d53;
 $color_main_active_font: #2b416a;
 $color_thumBorder: #ababab;
@@ -46,6 +53,19 @@ $color_thumBorder: #ababab;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'abril_fatfaceregular';
+    src: url('fonts/AbrilFatface-Regular-webfont.eot');
+    src: url('fonts/AbrilFatface-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/AbrilFatface-Regular-webfont.woff2') format('woff2'),
+         url('fonts/AbrilFatface-Regular-webfont.woff') format('woff'),
+         url('fonts/AbrilFatface-Regular-webfont.ttf') format('truetype'),
+         url('fonts/AbrilFatface-Regular-webfont.svg#abril_fatfaceregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 $font_regular: 'nobel', Helvetica, Helvetica Neue, Verdana, sans-serif;
 $font_condensed: 'nobelcondensed', Helvetica, Helvetica Neue, Verdana, sans-serif;
+$font_abril: 'abril_fatfaceregular', serif;

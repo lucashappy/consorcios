@@ -19,7 +19,8 @@ body {
     font-size: 13px;
     background-image: $homefig;
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position: center right 200px;
+    background-size: 600px auto;
 }
 
 a {
@@ -41,6 +42,7 @@ a {
     /* background-color: $color_main_a;*/
 
     height: 100%;
+    text-align: right;
     @extend .col-sm-5;
     @extend .col-md-4;
     @extend .col-lg-3;
@@ -52,7 +54,7 @@ a {
     }
     .navbar {
         padding-top: 15px;
-        padding-left: 15px;
+        //padding-left: 15px;
         a {
             color: $color_main_font;
             font-size: 1.6em;
@@ -66,6 +68,9 @@ a {
         }
         .navbar-nav {
             margin-left: 0px;
+            padding-right: 15px;
+            border-right: 1px solid rgba(255, 255, 255, 0.21);
+
             > li {
                 float: none;
                 a {
@@ -75,10 +80,15 @@ a {
                 a:target {
                     background-color: red;
                 }
+                a:hover, a:focus{
+                    background: none;
+                    color: white;
+                }
                 .activeMenuItem {
                     color: $color_main_active_font;
                 }
             }
+
         }
         .navbar-brand {
             width: 100%;
@@ -88,12 +98,24 @@ a {
             padding: 0px;
             margin: 15px 0;
             background-repeat: no-repeat;
-            background-position: center center;
-            background-size: auto 100%;
+            background-position: left center;
+           // background-size: auto 100%;
+            font-family: $font_abril;
             @media (max-width: 400px) {
                 margin-top: 0px;
             }
         }
+    }
+
+    .apoio{
+
+        height: 168px;
+        background-image: $img_apoio;
+        margin-top: 8em;
+        right: 0px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: right center;
     }
 }
 
@@ -124,6 +146,11 @@ a {
     @extend .col-sm-7;
     @extend .col-md-8;
     @extend .col-lg-9;
+
+
+    .texto{
+       padding: 3em;
+    }
     #consorcios {
         height: 100%;
         #searchFilter {
@@ -140,7 +167,7 @@ a {
         }
         #consorciosThumbs {
             height: 80%;
-            overflow-y: scroll;
+          //  overflow-y: scroll;
         }
         .thumb {
             background-color: white;
@@ -187,6 +214,8 @@ a {
                         width: 50px;
                         height: 50px;
                         float: right;
+                        background-position: center center;
+                        background-repeat: no-repeat;
                     }
                     .triangle {
                         position: absolute;
@@ -199,15 +228,19 @@ a {
                     }
                     .agua {
                         background-color: #8abecb;
+                        background-image: $img_agua;
                     }
                     .esgoto {
                         background-color: #eabf6b;
+                        background-image: $img_esgoto;
                     }
                     .residuos {
                         background-color: #98cb8a;
+                        background-image: $img_residuos;
                     }
                     .regulacao {
                         background-color: #ea806b;
+                        background-image: $img_regulacao;
                     }
                 }
             }
@@ -238,15 +271,29 @@ a {
             }
         }
     }
+
+    .contactForm{
+        input{
+            width: 100%;
+            max-width: 400px;
+        }
+        input[type="submit"]{
+            max-width: 60px;
+        }
+
+
+    }
 }
 
 #waves {
-    display: none;
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 330px;
-    background-image: $wave3, $img_esgoto, $img_torneira, $wave1, $wave2;
+   /* background-image: $wave3, $img_esgoto, $img_torneira, $wave1, $wave2;
     background-position: 5px 260px, right bottom, left top, 10px 185px, 0 220px;
-    background-repeat: repeat-x, no-repeat, no-repeat, repeat-x, repeat-x;
+    background-repeat: repeat-x, no-repeat, no-repeat, repeat-x, repeat-x;*/
+     background-image: $wave3, $wave1, $wave2;
+    background-position: 5px 280px,10px 205px, 0 240px;
+    background-repeat: repeat-x;
 }
