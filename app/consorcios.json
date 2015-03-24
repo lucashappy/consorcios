@@ -1,22 +1,22 @@
 [
     { "id" : "01",
       "name" : "Consórcio Intermunicipal Aliança para a Saúde – CIAS",
-      "uf" : "MG",
-      "area": "1"
+      "uf" : {"sigla":"MG"},
+      "area": 1
     },
     { "id" : "02",
       "name" : "Consórcio Intermunicipal de Urgência e Emergência do Noroeste do Paraná",
-      "uf" : "PR",
-      "area": "2"
+      "uf" : {"sigla":"PR"},
+      "area": 2
     },
     { "id" : "03",
       "name" : "Consórcio de Desenvolvimento Intermunicipal de Feijó e Tarauacá",
-      "uf" : "AC",
-      "area": "3"
+      "uf" : {"sigla":"AC"},
+      "area": 3
     },
     { "id" : "04",
       "name" : "Consórcio Público Intermunicipal de Desenvolvimento Econômico, Gestão Ambiental e Recursos Hídricos do Sul do Tocantins",
-      "uf" : "TO",
-      "area": "4"
+      "uf" : {"sigla":"TO"},
+      "area": 4
     }
 ]

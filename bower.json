@@ -7,7 +7,9 @@
     "compass-mixins": "~1.0.2",
     "tinycolor": "1.1.2",
     "animate.css": "~3.2.1",
-    "angular": "~1.3.15"
+    "angular": "~1.3.15",
+    "angular-route": "~1.3.15",
+    "bootstrap-select": "~1.6.4"
   },
   "version": "0.0.0",
   "authors": [

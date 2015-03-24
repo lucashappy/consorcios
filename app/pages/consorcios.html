@@ -1,0 +1,57 @@
+<div id="consorcios">
+    <h2>Consórcios</h2>
+
+    <div id="searchFilter">
+
+        <!--                     <input id="searchBox" type="search" class="form-control" placeholder="Pesquisar...">-->
+
+        <!--                     <input type="button" class="btn glyphicon glyphicon-filter" >-->
+
+        <div class="btn-group">
+            <input id="searchBox" type="search" class="form-control" placeholder="Pesquisar..." ng-model="searchConsorcios">
+        </div>
+        <div class="btn-group">
+<!--
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    Estados
+                    <span class="caret"></span>
+                </button>
+                <ul class="estados dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                </ul>
+            </div>
+-->
+           <select class="selectpicker" ng-model="filterEstado" ng-options="currOption for currOption in consorciosCtrl.estados">
+               <option value="">Estados:</option>
+            </select>
+
+        </div>
+        <div class="btn-group">
+            <select class="selectpicker" ng-model="filterArea" ng-options="currOption for currOption in [1,2,3,4]">
+               <option value="">Áreas</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="consorciosThumbs">
+
+
+        <div class="thumb" ng-repeat="consorcio in consorciosCtrl.consorcios ">
+            <p>{{consorcio.nome}}</p>
+            <aside>
+                <div class="estado" ng-style="{backgroundColor: consorcio.estados[0].color}" >{{consorcio.estados[0].uf}}</div>
+                <div class="areas">
+                    <div class="triangle"></div>
+                    <div class="agua" ng-show="{{consorcio.area_id=== 1 || consorcio.area_id === 3 }}"></div>
+                    <div class="esgoto" ng-show="{{consorcio.area === 1 || consorcio.area === 3 }}"></div>
+                    <div class="residuos" ng-show="{{consorcio.area === 2 || consorcio.area === 3 }}"></div>
+                    <div class="regulacao" ng-show="{{consorcio.area === 4 }}"></div>
+                </div>
+            </aside>
+        </div>
+
+
+
+
+    </div>
+</div>

@@ -136,11 +136,11 @@ a {
 #consorcios,
 #publicacoes,
 #contato {
-    display: none;
+  //  display: none;
 }
 
 .content {
-    visibility: hidden;
+   // visibility: hidden;
     background-color: $color_main_b;
     height: 100%;
     @extend .col-sm-7;

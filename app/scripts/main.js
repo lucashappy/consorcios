@@ -78,7 +78,7 @@ function loadConsorcios() {
                     }
                 });
 
-                $("#consorciosThumbs").append(content);
+               // $("#consorciosThumbs").append(content);
 
 
                 $('.thumb').click(function () {
@@ -111,7 +111,7 @@ function loadConsorcios() {
 
 /*** Buscar consórcios ***/
 
-$('#searchBox').keyup(function () {
+/*$('#searchBox').keyup(function () {
     var query = $(this).val();
     $("#consorciosThumbs .thumb p").each(function () {
         ($(this).text().search(new RegExp(query, "i")) < 0) ? $(this).parent().hide(): $(this).parent().show();
@@ -119,7 +119,7 @@ $('#searchBox').keyup(function () {
 });
 
 /***** Handle URLs and History *****/
-
+/*
 var pages = [$("#pesquisa"), $("#consorcios"), $("#publicacoes"), $("#contato")];
 pages.hideAll = function () {
 
@@ -216,7 +216,7 @@ function navigateToPage(pageName, menu) {
 
 
 
-    });
+  /*  });
 }
 
 $("a[data-role='ajax']").click(function (e) {
@@ -243,3 +243,4 @@ $(window).on('popstate', function (e) {
 
     navigateToPage();
 });
+*/

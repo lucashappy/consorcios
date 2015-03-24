@@ -11,6 +11,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -19,10 +20,10 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-
+    <base href="/">
 </head>
 
-<body>
+<body ng-app="ConsorciosApp">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -49,13 +50,13 @@
                 <div id="mainMenu" class="navbar-collapse collapse">
 
                     <ul class="nav navbar-nav navbar-right ">
-                        <li><a href="pesquisa" data-role="ajax">Pesquisa</a>
+                        <li><a href="#sobre">Pesquisa</a>
                         </li>
-                        <li><a href="consorcios" data-role="ajax">Consórcios</a>
+                        <li><a href="#consorcios">Consórcios</a>
                         </li>
-                        <li><a href="publicacoes" data-role="ajax">Publicações</a>
+                        <li><a href="#publicacoes">Publicações</a>
                         </li>
-                        <li><a href="contato" data-role="ajax">Contato</a>
+                        <li><a href="#contato">Contato</a>
                         </li>
 
                     </ul>
@@ -66,133 +67,8 @@
 
 
         </div>
-        <main class="content">
-            <div id="pesquisa">
-                <h2>Pesquisa</h2>
-                <div class="texto">
-                <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eleifend mauris ac convallis venenatis. Fusce pulvinar sed sem in commodo. Quisque iaculis, libero vel ultricies bibendum, tellus augue vestibulum risus, quis commodo nibh dui pharetra lectus. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus lectus eros, eu consectetur massa facilisis sit amet. Ut sit amet suscipit lacus. Quisque dapibus sapien felis, non vestibulum orci pulvinar sit amet. Sed sed semper neque. Vivamus dignissim diam vitae arcu dapibus pharetra. Cras quam mi, egestas quis ligula non, ullamcorper cursus massa. Donec euismod, massa a dapibus cursus, velit magna hendrerit diam, ut faucibus mi ante porttitor lectus. Vivamus ullamcorper, diam ac consequat tristique, ante ligula pharetra sem, ut porttitor arcu odio cursus felis. Mauris eu viverra lectus. Mauris pulvinar non sem sit amet interdum.
-</p>
-<p>
-Ut rhoncus, quam eu euismod vulputate, nibh lorem scelerisque turpis, ac ultricies dolor metus vitae erat. Aenean imperdiet, tellus sed mollis semper, risus tortor hendrerit odio, rhoncus egestas tortor dolor eget nibh. Phasellus vulputate finibus scelerisque. Duis neque quam, blandit et ultricies nec, cursus eu leo. Curabitur ut quam et eros bibendum eleifend at eu ex. Suspendisse imperdiet urna ex, pretium interdum risus gravida at. Nam fringilla, diam commodo imperdiet congue, turpis sapien tempor arcu, id ullamcorper diam magna eu ante. Suspendisse euismod mauris at risus pharetra maximus. Phasellus blandit neque nec urna elementum, at aliquam orci eleifend. Nullam pulvinar in ligula non vulputate. Sed enim sem, dignissim in odio sit amet, accumsan lobortis eros.
-</p>
-<p>
-Ut non eros ornare sem tristique consequat elementum id elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc at ante porta, pulvinar mauris eget, egestas justo. Pellentesque sollicitudin, eros sit amet volutpat faucibus, ante neque feugiat lectus, et efficitur arcu arcu in mi. Ut non pretium dolor. Etiam lacus est, pharetra ut massa sit amet, dapibus tincidunt ligula. Phasellus volutpat tristique risus ut auctor. Sed varius feugiat eros sed imperdiet. Nulla vitae ante at libero aliquam euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus eleifend ac tortor sit amet eleifend. Nunc id neque ante. Fusce condimentum ipsum ac magna faucibus, et molestie mauris finibus. Duis turpis arcu, malesuada nec nisi in, tincidunt sodales ex. Sed gravida augue id lectus lobortis, eu elementum leo maximus.
-</p>
-<p>
-Donec ut dui ut diam accumsan vulputate et non ipsum. Nullam lacinia ipsum vel egestas tempor. In ac laoreet sapien, et pulvinar lacus. Suspendisse ultrices et nibh a ultrices. In et semper lectus, non vehicula nisl. Vivamus quis eros sit amet lacus aliquam interdum. In quis elit eget tellus tempus iaculis nec eu arcu.
-</p>
-<p>
-Aenean quis ante eu ante rutrum maximus sed porttitor ex. Morbi vitae lobortis mauris, vel faucibus lectus. Integer vitae aliquam nibh. Quisque scelerisque libero vel ultricies dictum. Vestibulum blandit lobortis purus. Curabitur sed imperdiet mauris. Nam massa nisl, tincidunt et tristique at, laoreet a leo. Vivamus mauris odio, varius ut viverra non, congue a purus. Etiam sit amet placerat turpis. Morbi sed felis maximus, consequat lorem at, pulvinar quam.
-</p>
-                    </div>
-            </div>
-            <div id="consorcios">
-                <h2>Consórcios</h2>
-
-                <div id="searchFilter">
-
-                    <!--                     <input id="searchBox" type="search" class="form-control" placeholder="Pesquisar...">-->
-
-                    <!--                     <input type="button" class="btn glyphicon glyphicon-filter" >-->
-
-                    <div class="btn-group">
-                        <input id="searchBox" type="search" class="form-control" placeholder="Pesquisar...">
-                    </div>
-                    <div class="btn-group">
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                                Estados
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="estados dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="btn-group">
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                                Areas
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-                                <li>Água</li>
-                                <li>Esgoto</li>
-                                <li>Resíduos Sólidos</li>
-                                <li>Regulação de Saneamento</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-                </div>
-
-                <!--
-                 <div class="table-responsive">
-                <table id="consorciosTable" class="table table-striped table-bordered">
-                    <tr>
-                        <th>Consórcio</th>
-                        <th>UF</th>
-                        <th>Area</th>
-                    </tr>
-                </table>
-                </div>
--->
-
-                <div id="consorciosThumbs">
-
-                    <!--
-                    <div class="thumb">
-                        <p>Consórcio Intermunicipal Aliança para a Saúde</p>
-                        <aside>
-                        <div class="estado">TO</div>
-                        <div class="areas">
-                            <div class="triangle"></div>
-                            <div class="agua"></div>
-                            <div class="esgoto"></div>
-                            <div class="residuos"></div>
-                            <div class="regulacao"></div>
-                        </div>
-                    </aside>
-                    </div>
--->
-
-
-
-                </div>
-            </div>
-            <div id="publicacoes">
-                <h2>Publicações</h2>
-            </div>
-            <div id="contato">
-                <h2>Contato</h2>
-                 <form class="contactForm" action="action_page.php">
-                    Nome:
-                    <br>
-                    <input name="name" value="" type="text">
-                    <br>Email:
-                    <br>
-                    <input name="email" value="" type="text">
-                    <br>Subject:
-                    <br>
-                    <input name="subject" value="" type="text">
-                    <br>Message:
-                    <br>
-                    <textarea name="message" cols="40" rows="10" aria-invalid="false"></textarea>
-                    <br>
-                    <br>
-                    <input value="Send" type="submit">
-                </form>
-            </div>
-
-        </main>
-    <div id="waves">
+        <main class="content" ng-view></main>
+<!--    <div id="waves">-->
     </div>
     </div>
 
@@ -214,6 +90,9 @@ Aenean quis ante eu ante rutrum maximus sed porttitor ex. Morbi vitae lobortis m
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
     <script src="bower_components/tinycolor/tinycolor.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -236,10 +115,10 @@ Aenean quis ante eu ante rutrum maximus sed porttitor ex. Morbi vitae lobortis m
     </script>
 
     <!-- build:js({app,.tmp}) scripts/main.js -->
-    <script src="scripts/main.js">
-    </script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/app.js"></script>
     <script>
-        navigateToPage();
+       // navigateToPage();
     </script>
     <!-- endbuild -->
 </body>
