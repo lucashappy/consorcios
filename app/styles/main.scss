@@ -10,7 +10,7 @@ html,
 body {
     height: 100%;
     max-width: 100%;
-    overflow: hidden;
+    /*  overflow: hidden;*/
 }
 
 body {
@@ -70,7 +70,6 @@ a {
             margin-left: 0px;
             padding-right: 15px;
             border-right: 1px solid rgba(255, 255, 255, 0.21);
-
             > li {
                 float: none;
                 a {
@@ -80,7 +79,8 @@ a {
                 a:target {
                     background-color: red;
                 }
-                a:hover, a:focus{
+                a:hover,
+                a:focus {
                     background: none;
                     color: white;
                 }
@@ -88,7 +88,6 @@ a {
                     color: $color_main_active_font;
                 }
             }
-
         }
         .navbar-brand {
             width: 100%;
@@ -99,16 +98,14 @@ a {
             margin: 15px 0;
             background-repeat: no-repeat;
             background-position: left center;
-           // background-size: auto 100%;
+            // background-size: auto 100%;
             font-family: $font_abril;
             @media (max-width: 400px) {
                 margin-top: 0px;
             }
         }
     }
-
-    .apoio{
-
+    .apoio {
         height: 168px;
         background-image: $img_apoio;
         margin-top: 8em;
@@ -136,28 +133,38 @@ a {
 #consorcios,
 #publicacoes,
 #contato {
-  //  display: none;
+    //  display: none;
 }
 
 .content {
-   // visibility: hidden;
+    // visibility: hidden;
     background-color: $color_main_b;
     height: 100%;
     @extend .col-sm-7;
     @extend .col-md-8;
     @extend .col-lg-9;
-
-
-    .texto{
-       padding: 3em;
+    padding-left: 0px;
+    padding-right: 0px;
+    .texto {
+        padding: 3em;
     }
     #consorcios {
+        display: flex;
+        align-items: stretch;
         height: 100%;
+        .consorciosList {
+            height: 100%;
+            min-width: 320px;
+            flex-shrink: 3;
+            border-right: 1px solid #F9F9F9;
+            margin-top: -20px;
+        }
         #searchFilter {
             width: 100%;
-            height: 4em;
             border-bottom: 1px solid white;
+            padding-bottom: 15px;
             margin: 20px 0px;
+            padding-left: 15px;
             #searchBox {
                 max-width: 290px;
             }
@@ -167,7 +174,18 @@ a {
         }
         #consorciosThumbs {
             height: 80%;
-          //  overflow-y: scroll;
+            padding-left: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+            &:hover {
+                // overflow-y: scroll;
+            }
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
         .thumb {
             background-color: white;
@@ -180,108 +198,102 @@ a {
             margin-bottom: 15px;
             margin-right: 15px;
             cursor: pointer;
-            p {
-                padding: 15px;
-                padding-right: 115px;
-                font-size: 1.2em;
-            }
-            aside {
-                position: absolute;
-                top: 0;
-                right: -5px;
-                width: 100px;
-                padding: 10px 0;
-                height: 100%;
-                text-align: right;
-                .estado {
-                    width: 2.4em;
-                    height: 2.4em;
-                    display: inline-block;
-                    margin-right: 15px;
-                    margin-bottom: 10px;
-                    color: white;
-                    font-size: 1.2em;
-                    line-height: 2.4em;
-                    text-align: center;
-                    vertical-align: middle;
-                    background-color: green;
-                    @include border-radius(1.2em);
-                }
-                .areas {
-                    position: relative;
-                    margin-right: 0px;
-                    > div {
-                        width: 50px;
-                        height: 50px;
-                        float: right;
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                    }
-                    .triangle {
-                        position: absolute;
-                        top: -5px;
-                        right: 0px;
-                        width: 0px;
-                        height: 0px;
-                        border-right: 4px solid transparent;
-                        border-bottom: 5px solid #717171;
-                    }
-                    .agua {
-                        background-color: #8abecb;
-                        background-image: $img_agua;
-                    }
-                    .esgoto {
-                        background-color: #eabf6b;
-                        background-image: $img_esgoto;
-                    }
-                    .residuos {
-                        background-color: #98cb8a;
-                        background-image: $img_residuos;
-                    }
-                    .regulacao {
-                        background-color: #ea806b;
-                        background-image: $img_regulacao;
-                    }
-                }
-            }
         }
+        .thumb:hover {
+            border-color: red;
+        }
+    }
+    #expandedConsorcio {
+        background-color: #FFF;
+        width: 100%;
+    }
+    .thumb,
+    #expandedConsorcio {
         .close {
-            display: none;
-        }
-        .consorcioExpanded {
-            max-width: none;
-            position: absolute;
-            z-index: 10;
-            cursor: auto;
-            margin: 0px;
+            display: block;
             width: 100%;
+            margin-right: 25px;
+            margin-bottom: 15px;
+        }
+        p {
+            padding: 15px;
+            padding-right: 115px;
+            font-size: 1.2em;
+        }
+        aside {
+            position: absolute;
+            top: 0;
+            right: -5px;
+            width: 100px;
+            padding: 10px 0;
             height: 100%;
-            top: -100%;
-            left: 100%;
-            transform: translate(-100%, 100%);
-            p {
-                font-size: 2em;
-                border-bottom: 1px solid $color_thumBorder;
+            text-align: right;
+            .estados div {
+                width: 2.4em;
+                height: 2.4em;
+                display: inline-block;
+                margin-right: 5px;
+                margin-bottom: 10px;
+                color: white;
+                font-size: 1.2em;
+                line-height: 2.4em;
+                text-align: center;
+                vertical-align: middle;
+                background-color: green;
+                &:last-child {
+                    margin-right: 15px;
+                }
+                @include border-radius(1.2em);
             }
-            .close {
-                display: block;
-                width: 100%;
-                margin-right: 25px;
-                margin-bottom: 15px;
+            .areas {
+                position: relative;
+                margin-right: 0px;
+                > div {
+                    width: 50px;
+                    height: 50px;
+                    float: right;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+                .triangle {
+                    position: absolute;
+                    top: -5px;
+                    right: 0px;
+                    width: 0px;
+                    height: 0px;
+                    border-right: 4px solid transparent;
+                    border-bottom: 5px solid #717171;
+                }
+                .agua {
+                    background-color: #8abecb;
+                    background-image: $img_agua;
+                }
+                .esgoto {
+                    background-color: #eabf6b;
+                    background-image: $img_esgoto;
+                }
+                .residuos {
+                    background-color: #98cb8a;
+                    background-image: $img_residuos;
+                }
+                .regulacao {
+                    background-color: #ea806b;
+                    background-image: $img_regulacao;
+                }
             }
         }
     }
-
-    .contactForm{
-        input{
+    #expandedConsorcio p {
+        font-size: 1.6em;
+    }
+    .contactForm {
+        input {
             width: 100%;
             max-width: 400px;
         }
-        input[type="submit"]{
+        input[type="submit"] {
             max-width: 60px;
         }
-
-
     }
 }
 
@@ -290,10 +302,11 @@ a {
     bottom: 0;
     width: 100%;
     height: 330px;
-   /* background-image: $wave3, $img_esgoto, $img_torneira, $wave1, $wave2;
+    /* background-image: $wave3, $img_esgoto, $img_torneira, $wave1, $wave2;
     background-position: 5px 260px, right bottom, left top, 10px 185px, 0 220px;
     background-repeat: repeat-x, no-repeat, no-repeat, repeat-x, repeat-x;*/
-     background-image: $wave3, $wave1, $wave2;
-    background-position: 5px 280px,10px 205px, 0 240px;
+
+    background-image: $wave3, $wave1, $wave2;
+    background-position: 5px 280px, 10px 205px, 0 240px;
     background-repeat: repeat-x;
 }

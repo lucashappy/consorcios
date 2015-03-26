@@ -1,22 +1,42 @@
 [
     { "id" : "01",
-      "name" : "Consórcio Intermunicipal Aliança para a Saúde – CIAS",
-      "uf" : {"sigla":"MG"},
-      "area": 1
+      "nome" : "Consórcio Intermunicipal Aliança para a Saúde – CIAS",
+      "estados" : [{"estado_id": 1,"uf":"MG"}],
+      "area_id": "1"
     },
     { "id" : "02",
-      "name" : "Consórcio Intermunicipal de Urgência e Emergência do Noroeste do Paraná",
-      "uf" : {"sigla":"PR"},
-      "area": 2
+      "nome" : "Consórcio Intermunicipal de Urgência e Emergência do Noroeste do Paraná",
+      "estados" : [{"estado_id": 9,"uf":"PR"}],
+      "area_id": "2"
     },
     { "id" : "03",
-      "name" : "Consórcio de Desenvolvimento Intermunicipal de Feijó e Tarauacá",
-      "uf" : {"sigla":"AC"},
-      "area": 3
+      "nome" : "Consórcio de Desenvolvimento Intermunicipal de Feijó e Tarauacá",
+      "estados" : [{"estado_id": 18,"uf":"AC"}],
+      "area_id": "3"
     },
     { "id" : "04",
-      "name" : "Consórcio Público Intermunicipal de Desenvolvimento Econômico, Gestão Ambiental e Recursos Hídricos do Sul do Tocantins",
-      "uf" : {"sigla":"TO"},
-      "area": 4
+      "nome" : "Consórcio Público Intermunicipal de Desenvolvimento Econômico, Gestão Ambiental e Recursos Hídricos do Sul do Tocantins ",
+      "estados" : [{"estado_id": 23,"uf":"CE"}, {"estado_id": 27,"uf":"TO"}],
+      "area_id": "4"
+    },
+    { "id" : "01",
+      "nome" : "Consórcio Intermunicipal Aliança para a Saúde – CIAS",
+      "estados" : [{"estado_id": 1,"uf":"MG"}],
+      "area_id": "1"
+    },
+    { "id" : "02",
+      "nome" : "Consórcio Intermunicipal de Urgência e Emergência do Noroeste do Paraná",
+      "estados" : [{"estado_id": 9,"uf":"PR"}],
+      "area_id": "2"
+    },
+    { "id" : "03",
+      "nome" : "Consórcio de Desenvolvimento Intermunicipal de Feijó e Tarauacá",
+      "estados" : [{"estado_id": 18,"uf":"AC"}],
+      "area_id": "3"
+    },
+    { "id" : "04",
+      "nome" : "Consórcio Público Intermunicipal de Desenvolvimento Econômico, Gestão Ambiental e Recursos Hídricos do Sul do Tocantins",
+      "estados" : [{"estado_id": 23,"uf":"CE"}, {"estado_id": 27,"uf":"TO"}],
+      "area_id": "4"
     }
 ]
